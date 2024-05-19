@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class AllSorting {
 
-    // Bubble Sort O(N^2)
+    // Bubble Sort O(N^2) -- ascending and deceding
 
     public static void bubble_sort(int arr[]) {
 
@@ -22,7 +22,7 @@ public class AllSorting {
         System.out.println(Arrays.toString(arr));
     }
 
-    // Selection Sort O(N^2)
+    // Selection Sort O(N^2) ascending and decending
 
     public static void selection_sort(int arr[]) {
 
@@ -32,7 +32,7 @@ public class AllSorting {
 
             for (int j = i + 1; j < arr.length; j++) {
 
-                if (arr[minPos] > arr[j]) {
+                if (arr[minPos] < arr[j]) {
                     minPos = j;
                 }
 
@@ -45,22 +45,22 @@ public class AllSorting {
         System.out.println(Arrays.toString(arr));
     }
 
-    // insertion sort
+    // insertion sort ascending and decending
 
     public static void insertion_sort(int arr[]) {
 
         for (int i = 1; i < arr.length; i++) {
             int curr = arr[i];
-            int pos = i - 1;
+            int prev = i - 1;
 
-            while (pos >= 0 && arr[pos] > curr) {
-                arr[pos + 1] = arr[pos];
-                pos--;
+            while (prev >= 0 && arr[prev] < curr) {
+                arr[prev + 1] = arr[prev];
+                prev--;
             }
 
-            // insertion
+            // insertion sort ascending and decending
 
-            arr[pos + 1] = curr;
+            arr[prev + 1] = curr;
         }
 
         System.out.println(Arrays.toString(arr));
@@ -85,7 +85,7 @@ public class AllSorting {
         // sort
 
         int j = 0;
-        for (int i = 0; i < count.length; i++) {
+        for (int i = count.length - 1; i >= 0; i--) {
             while (count[i] > 0) {
                 arr[j] = i;
                 count[i]--;
