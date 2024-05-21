@@ -53,7 +53,7 @@ public class Solution {
           // base
 
           if (n == 0 || n == 1) {
-               return 1;
+               return n;
 
           }
 
@@ -167,7 +167,7 @@ public class Solution {
 
           // System.out.println(calSum(100));
 
-          // System.out.println(calFibo(10));
+          System.out.println(calFibo(10));
 
           // System.out.println(isSorted(arr, 0));
           // int arr[] = { 5, 3, 4, 5, 3, 32, 4, 5 };
@@ -183,7 +183,7 @@ public class Solution {
 
           // System.out.println(tilingProblem(4));
 
-          removeDuplicate("appanancollege", 0, new StringBuilder(""), new boolean[26]);
+          // removeDuplicate("appanancollege", 0, new StringBuilder(""), new boolean[26]);
      }
 
 }
