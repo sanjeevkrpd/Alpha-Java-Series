@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class KhansAlgorithm {
+public class KahnsAlgorithm {
 
     // Edge class representing an edge in the graph
     static class Edge {
