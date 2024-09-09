@@ -6,7 +6,7 @@ public class CycleDetect {
 
     static class Edge {
         int src;
-        int dest; // Corrected to 'dest' for destination
+        int dest; 
 
         public Edge(int src, int dest) {
             this.src = src;
@@ -15,11 +15,11 @@ public class CycleDetect {
     }
 
     public static boolean detectCycle(ArrayList<Edge>[] graph) {
-        boolean[] vis = new boolean[graph.length]; // Visited array to mark visited nodes
+        boolean[] vis = new boolean[graph.length]; 
 
-        // Traverse all nodes, ensuring each component is checked for a cycle
+  
         for (int i = 0; i < graph.length; i++) {
-            // If the node is not visited, start a DFS from this node
+           
             if (!vis[i]) {
                 if (detectCycleUntil(graph, vis, i, -1)) {
                     return true; // If a cycle is detected, return true
@@ -30,24 +30,24 @@ public class CycleDetect {
     }
 
     public static boolean detectCycleUntil(ArrayList<Edge>[] graph, boolean[] vis, int curr, int parent) {
-        vis[curr] = true; // Mark the current node as visited
+        vis[curr] = true; 
 
-        // Traverse through all edges of the current node
+    
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
 
-            // If the adjacent node is not visited, recursively check for a cycle
+           
             if (!vis[e.dest]) {
                 if (detectCycleUntil(graph, vis, e.dest, curr)) {
-                    return true; // Cycle detected in the recursive call
+                    return true; 
                 }
             } 
-            // If the adjacent node is visited and is not the parent, it means a cycle exists
+           
             else if (e.dest != parent) {
-                return true; // Cycle detected
+                return true; 
             }
         }
-        return false; // No cycle found in this DFS path
+        return false; 
     }
 
     public static void main(String[] args) {
@@ -70,9 +70,7 @@ public class CycleDetect {
         graph[3].add(new Edge(3, 5));
 
         graph[4].add(new Edge(4, 5));
-        // graph[5].add(new Edge(5, 6)); // Removed since vertex 6 does not exist in a graph of size 6
 
-        // Output if cycle is detected or not
         System.out.println(detectCycle(graph));
     }
 }
