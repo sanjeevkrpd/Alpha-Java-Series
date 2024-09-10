@@ -22,11 +22,11 @@ public class CycleDetect {
            
             if (!vis[i]) {
                 if (detectCycleUntil(graph, vis, i, -1)) {
-                    return true; // If a cycle is detected, return true
+                    return true;  
                 }
             }
         }
-        return false; // No cycle detected, return false
+        return false; 
     }
 
     public static boolean detectCycleUntil(ArrayList<Edge>[] graph, boolean[] vis, int curr, int parent) {
@@ -51,7 +51,7 @@ public class CycleDetect {
     }
 
     public static void main(String[] args) {
-        int V = 6; // Number of vertices
+        int V = 6; 
 
         @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[V];
@@ -59,7 +59,13 @@ public class CycleDetect {
         for (int i = 0; i < V; i++) {
             graph[i] = new ArrayList<>();
         }
+/* 
 
+        0 ----> 1 ---> 3
+        |           /  |
+        |          /   |
+        2 ------> 4--->5
+        */
         graph[0].add(new Edge(0, 1));
         graph[0].add(new Edge(0, 2));
 
