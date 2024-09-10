@@ -1,4 +1,4 @@
-package Problems;
+package Arrays;
 import java.util.Arrays;
 
 public class MergeArrays {
