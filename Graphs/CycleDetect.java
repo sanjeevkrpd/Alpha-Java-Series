@@ -64,7 +64,7 @@ public class CycleDetect {
         0 ----> 1 ---> 3
         |           /  |
         |          /   |
-        2 ------> 4--->5
+        2 ------> 4--->5 
         */
         graph[0].add(new Edge(0, 1));
         graph[0].add(new Edge(0, 2));
