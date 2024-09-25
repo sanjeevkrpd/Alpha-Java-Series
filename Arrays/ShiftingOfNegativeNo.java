@@ -13,6 +13,7 @@ public class ShiftingOfNegativeNo {
         String str = "sum 45+58+588";
 
         String numbersOnly = str.replaceAll("[^0-9+]", "");
+        System.out.println(numbersOnly);
 
         String[] numbers = numbersOnly.split("\\+");
 

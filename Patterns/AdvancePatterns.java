@@ -220,18 +220,18 @@ public class AdvancePatterns {
     }
 
     public static void main(String[] args) {
-        // hollow_rectangle(5, 5);
-        // rotate_halfPyramid(5);
-        // half_pyramid_nos(5);
+        hollow_rectangle(5, 5);
+        rotate_halfPyramid(5);
+        half_pyramid_nos(5);
 
-        // floyds_triangle(5);
-        // zero_one_triangle(5);
+        floyds_triangle(5);
+        zero_one_triangle(5);
 
-        // butterfly_pattern(5);
-        // solid_rhombus(5);
-        // hollow_rhombus(5);
-        // diamond_shape(5);
-        // number_pyramid(5);
+        butterfly_pattern(5);
+        solid_rhombus(5);
+        hollow_rhombus(5);
+        diamond_shape(5);
+        number_pyramid(5);
         palindromic_pattern(5);
     }
 }
