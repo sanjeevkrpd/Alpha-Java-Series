@@ -1,5 +1,6 @@
 package TcsProlems;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class ReverseString {
@@ -13,6 +14,8 @@ public class ReverseString {
             
             s.push(str.charAt(i));
         }
+        ArrayList<Character>  list = new ArrayList<>();
+
 
         while (!s.isEmpty()) {
             System.out.print(s.pop());
