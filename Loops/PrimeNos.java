@@ -1,3 +1,4 @@
+package Loops;
 public class PrimeNos {
     public static void main(String[] args) {
 
