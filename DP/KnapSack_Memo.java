@@ -13,10 +13,10 @@ public class KnapSack_Memo {
 
         if (wt[n - 1] <= W) {
 
-           
+           // include 
             int ans1 = val[n - 1] + knapsack(val, wt, W - wt[n - 1], n - 1);
 
-           
+           // exclude
             int ans2 = knapsack(val, wt, W, n - 1);
 
      
