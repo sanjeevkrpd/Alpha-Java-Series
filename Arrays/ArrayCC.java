@@ -190,7 +190,7 @@ public class ArrayCC {
                     min_sum = arr[i];
                 }
             }
-            System.out.println(-min_sum);
+            System.out.println(min_sum);
         } else {
             System.out.println(ms);
         }
