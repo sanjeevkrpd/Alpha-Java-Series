@@ -6,19 +6,21 @@
             int start = 0;
             int end = arr.length - 1;
     
+           
             while (start < end) {
+                
                 int mid = start + (end - start) / 2;
-    
-                if (arr[mid] > arr[end]) {
-                   
+
+                if (arr[mid] > arr[mid+1]) {
+                    
                     start = mid + 1;
-                } else {
-                  
+                }else{
                     end = mid;
                 }
             }
-    
-            return arr[start];
+            
+            return arr[end];
+
         }
     
         public static void main(String[] args) {
